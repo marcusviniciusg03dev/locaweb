@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100;300;400;500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Sora, Helvetica, Arial, sans-serif;
+  background-color: $backgroundColor;
+  font-size: $fontSize;
+}
+
+html {
+  height: 100%;
+}
+
+a {
+  color: $primaryColor;
+}
+
+input,
+button {
+  padding: $defaultPadding;
+  border-radius: $cornerRadius;
+}
+
+label {
+  display: inline-grid;
+}
+
+input,
+button,
+label {
+  font-size: 16px;
+}
+
+input {
+  border: 1px solid rgba(81, 93, 116, 0.5);
+}
+
+input::placeholder {
+  color: #000;
+}
+
+button {
+  background-color: $primaryColor;
+  color: $white;
+  border: 0;
+  cursor: pointer;
+  transition: filter .3s;
+}
+
+button:hover {
+  filter: opacity(.7);
+}
+
+.primary-decorated-text {
+  text-decoration: underline;
+  color: $primaryColor;
+}
+
+ul {
+  list-style: none;
+}
+
+hr {
+  border-top: 1px solid rgba(196, 196, 196, 0.5);
+}

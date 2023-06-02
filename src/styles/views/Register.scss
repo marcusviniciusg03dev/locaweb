@@ -1,0 +1,31 @@
+#register-page {
+    width: 100%;
+    max-width: 60rem;
+    display: grid;
+    gap: 24px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+#register-page #logo {
+    margin: auto;
+}
+
+#register-page #title {
+    font-size: 28px;
+    color: rgba(41, 45, 50, 1);
+}
+
+#plans-list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+@media (max-width: 800px) {
+    #plans-list {
+        grid-auto-flow: row;
+    }
+}

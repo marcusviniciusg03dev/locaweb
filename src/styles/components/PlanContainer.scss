@@ -1,0 +1,71 @@
+.plan-container {
+    position: relative;
+    background-color: $white;
+    color: rgba(102, 102, 102, 1);
+    font-size: 17px;
+    display: grid;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 5px;
+    grid-auto-rows: min-content;
+
+    span p {
+        font-size: 14px;
+    }
+
+    span ul {
+        text-align: left;
+        display: grid;
+        gap: 8px;
+        font-size: 17px;
+    
+        li::before {
+            content: '✓ ';
+            font-weight: 900;
+        }
+    }
+}
+
+#most-used-plan-flag {
+    background-color: #10C300;
+    color: $white;
+}
+
+#choosed-plan-flag {
+    background-color: #000;
+    color: $white;
+}
+
+.plan-flag {
+    padding: 8px 16px;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 14px;
+    justify-self: center;
+    top: -16px;
+}
+
+.plan-price {
+    color: $primaryColor;
+    font-size: 28px;
+
+    strong {
+        font-size: 34px;
+    }
+
+    small {
+        font-weight: 500;
+        font-size: 20px;
+    }
+}
+
+.plan-for {
+    margin: auto;
+    max-width: 80%;
+}
+
+.plan-details {
+    text-align: left;
+    display: grid;
+    gap: 16px;
+}
