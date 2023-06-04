@@ -5,7 +5,7 @@
     gap: 24px;
     text-align: center;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2rem;
 }
 
 #register-page #logo {
@@ -24,8 +24,72 @@
     padding: 24px;
 }
 
+#register-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
 @media (max-width: 800px) {
     #plans-list {
         grid-auto-flow: row;
+    }
+
+    #register-grid {
+        grid-template-columns: auto;
+    }
+
+    #register-grid .plan-container {
+        grid-row: 1;
+    }
+}
+
+#register-container {
+    background-color: #fff;
+    border: 1px solid rgba(230, 234, 242, 1);
+    padding: 24px;
+    border-radius: 5px;
+    text-align: left;
+    display: grid;
+    grid-auto-rows: min-content;
+
+    form {
+        display: grid;
+        gap: 24px;
+    }
+}
+
+#terms-of-use-and-privacy-policy-label {
+    display: grid;
+    grid-template-columns: 40px auto;
+
+    input {
+        display: none;
+    }
+
+    input:checked ~ span {
+        display: block;
+        background-color: rgba(250, 241, 245, 1);
+        border: 1px solid rgba(243, 1, 104, 1);
+    }
+    
+    input:checked ~ span::after {
+        content: "✓";
+        font-weight: 900;
+        color: rgba(243, 1, 104, 1);
+        margin: auto;
+    }
+
+    span {
+        height: 25px;
+        width: 25px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #cbcbcb;
+        text-align: center;
+    }
+
+    span:hover {
+        background: rgba(250, 241, 245, 1);
     }
 }

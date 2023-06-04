@@ -69,3 +69,29 @@
     display: grid;
     gap: 16px;
 }
+
+#change-plan-span {
+    background-image: linear-gradient(to top, #fff, rgb(255 255 255), rgba(255, 255, 255, 0.926));
+    bottom: 0;
+    height: 5rem;
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    #change-plan-span {
+        position: relative;
+    }
+}
+
+#change-plan-button {
+    color: #000;
+    border: 2px solid;
+    padding: 16px 32px;
+    border-radius: 5px;
+    text-decoration: none;
+}

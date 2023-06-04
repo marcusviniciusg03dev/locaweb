@@ -1,0 +1,47 @@
+[
+    {
+        "number": "1",
+        "monthlyPrice": 0,
+        "for": "Ideal para quem está começando.",
+        "serversLocatedAt": "Estados Unidos",
+        "dataCentersNationallityInPt": "americanos",
+        "locationFtpUsers": 1,
+        "locationProfessionalEmailQty": 1,
+        "locationFreeSubdomains": 1,
+        "freeMigrations": false,
+        "mainApps": [
+            "Wordpress",
+            "Drupal"
+        ]
+    },
+    {
+        "number": "2",
+        "monthlyPrice": 499,
+        "for": "Ideal para site com mais mais de 30k de visitas.",
+        "serversLocatedAt": "Brasil",
+        "dataCentersNationallityInPt": "São Paulo",
+        "locationFtpUsers": 10,
+        "locationProfessionalEmailQty": 30,
+        "locationFreeSubdomains": 10,
+        "freeMigrations": true,
+        "mainApps": [
+            "Wordpress",
+            "Drupal"
+        ]
+    },
+    {
+        "number": "3",
+        "monthlyPrice": 999,
+        "for": "Ideal para site com mais mais de 60k de visitas.",
+        "serversLocatedAt": "Brasil",
+        "dataCentersNationallityInPt": "São Paulo",
+        "locationFtpUsers": "Ilimitadas",
+        "locationProfessionalEmailQty": "Ilimitadas",
+        "locationFreeSubdomains": 50,
+        "freeMigrations": true,
+        "mainApps": [
+            "Wordpress",
+            "Drupal"
+        ]
+    }
+]

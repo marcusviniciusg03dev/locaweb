@@ -2,7 +2,7 @@
 export default {
     name: 'PlanContainer',
     props: {
-        name: String,
+        number: String,
         monthlyPrice: Number,
         for: String,
         serversLocatedAt: String,
@@ -27,7 +27,7 @@ export default {
             MAIS USADO
         </div>
 
-        <h3>{{ name }}</h3>
+        <h3>{{ `Hospedagem ${number}` }}</h3>
         
         <strong v-if="monthlyPrice === 0" class="plan-price">Grátis</strong>
 
@@ -45,7 +45,10 @@ export default {
 
         <hr />
 
-        <button>ESCOLHA ESSE PLANO</button>
+        <button
+            v-if="!choosedPlan"
+            @click.prevent="() => $router.push(`/cadastrar?plano=${number}`)"
+        >ESCOLHA ESSE PLANO</button>
 
         <span class="plan-details">
             <h4>Seu site em servidores <u>no {{serversLocatedAt}}</u>.</h4>
@@ -90,11 +93,17 @@ export default {
             <ul>
                 <li>Webmail RoundCube;</li>
                 <li>AntiSpam;</li>
-                <li>Painel de gerenciamento de DNS;</li>
-                <li>Painel de controle web;</li>
-                <li>Configurações de PHP personalizáveis;</li>
-                <li>Certificado SSL Grátis;</li>
-                <li>Transferência ilimitada.</li>
+                
+                <span v-if="choosedPlan" id="change-plan-span">
+                    <RouterLink to="/cadastrar" id="change-plan-button">Trocar plano</RouterLink>
+                </span>
+                <template v-else>
+                    <li>Painel de gerenciamento de DNS;</li>
+                    <li>Painel de controle web;</li>
+                    <li>Configurações de PHP personalizáveis;</li>
+                    <li>Certificado SSL Grátis;</li>
+                    <li>Transferência ilimitada.</li>
+                </template>  
             </ul>
         </span>
     </span>
