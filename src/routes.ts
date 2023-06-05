@@ -7,7 +7,6 @@ import AppLayout from './layouts/AppLayout.vue';
 import Home from './views/app/Home.vue';
 
 import NotFound from "./views/NotFound.vue";
-import { useUserStore } from "./stores/useUserStore";
 
 const routes = createRouter({
     history: createWebHashHistory(),
