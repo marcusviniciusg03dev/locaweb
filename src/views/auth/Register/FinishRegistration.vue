@@ -1,7 +1,8 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import PlanContainer from '../../components/PlanContainer.vue';
+import PlanContainer from '../../../components/PlanContainer.vue';
 import { toast } from 'vue3-toastify';
+import { useRouter } from 'vue-router';
 
 const form = reactive({
     completeName: "",
@@ -21,8 +22,10 @@ export default defineComponent({
         return { form };
     },
     components: { PlanContainer },
-    methods: {
-        handleRegister: () => {
+    setup: () => {
+        const router = useRouter();
+
+        const handleRegister = () => {
             if (!form.acceptedTerms) {
                 toast.info('os termos e políticas precisam ser aceitos.');
                 return;
@@ -59,11 +62,14 @@ export default defineComponent({
                 )
             })
                 .then(res => res.json())
-                .then(_json => {
+                .then(async _json => {
+                    await router.push('/');
                     toast.success('conta criada!');
                 })
                 .catch(() => toast.error('algum erro occoreu, tente mais tarde.'))
-        }
+        };
+
+        return { handleRegister };
     }
 })
 </script>

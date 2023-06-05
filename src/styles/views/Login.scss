@@ -1,0 +1,43 @@
+#center-wrapper {
+    width: 100%;
+    max-width: 30rem;
+    margin: auto;
+    display: grid;
+    grid-gap: 1.5rem;
+    align-content: center;
+    margin: auto;
+}
+
+#center-wrapper #logo, #center-wrapper #not-signed-item {
+    margin: auto;
+}
+
+#center-wrapper #logo {
+    width: 176px;
+}
+
+#login-container {
+    background: $white;
+    border: 1px solid #E6EAF2;
+    border-radius: $cornerRadius;
+    display: grid;
+    grid-gap: 8px;
+    padding: 1.5rem;
+}
+
+#login-container form {
+    display: grid;
+    grid-gap: 16px;
+}
+
+#login-container #logo {
+    width: 176px;
+}
+
+#forgot-password-link {
+    color: rgba(81, 93, 116, 1);
+    text-decoration: none;
+    font-size: 16px;
+    justify-self: end;
+    margin-bottom: 8px;
+}

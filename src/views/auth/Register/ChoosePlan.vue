@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PlanContainer from '../../components/PlanContainer.vue';
+import PlanContainer from '../../../components/PlanContainer.vue';
 
 export default defineComponent({
     props: ["plans"],

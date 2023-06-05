@@ -13,8 +13,12 @@
   font-size: $fontSize;
 }
 
-html {
+html, body, #app {
   height: 100%;
+}
+
+#app {
+  display: flex;
 }
 
 a {

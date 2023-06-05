@@ -2,7 +2,7 @@
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
-import plans from '../../data/plans.json';
+import plans from '../../../data/plans.json';
 
 
 import ChoosePlan from './ChoosePlan.vue';
@@ -31,7 +31,7 @@ export default defineComponent({
 
 <template>
     <main id="register-page">
-        <img src="../../assets/locaweb.svg" id="logo" />
+        <img src="../../../assets/locaweb.svg" id="logo" />
         <h1 id="title">
             Você está muito próximo de mudar a forma de
             <br />
@@ -43,5 +43,5 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-@import '../../styles/views/Register.scss';
+@import '../../../styles/views/Register.scss';
 </style>
