@@ -1,0 +1,29 @@
+#home-page {
+    display: grid;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+
+
+#youtube-video {
+    width: 90%;
+    height: 250px;
+    margin: auto;
+}
+
+@media (min-width: 700px) {
+    #youtube-video {
+        width: 600px;
+        height: 350px;
+    }
+}
+
+@media (min-width: 900px) {
+    #youtube-video {
+    width: 800px;
+    height: 450px;
+    
+}
+}

@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Register from "./views/auth/Register/Main.vue";
 import Login from "./views/auth/Login.vue";
 
+import AppLayout from './layouts/AppLayout.vue';
 import Home from './views/app/Home.vue';
 
 import NotFound from "./views/NotFound.vue";
@@ -22,11 +23,17 @@ const routes = createRouter({
         },
         {
             path: '/app',
-            name: 'home',
-            component: Home,
+            name: 'app',
+            component: AppLayout,
             meta: {
                 requireLogin: true,
-            }
+            },
+            children: [
+                {
+                    path: '',
+                    component: Home,
+                }
+            ]
         },
         {
             path: '/nao-encontrado',

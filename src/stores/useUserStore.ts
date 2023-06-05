@@ -15,7 +15,11 @@ export const useUserStore = defineStore('user', {
             user.value = data;
         }
 
-        return { user, store };
+        const resetUser = () => {
+            user.value = null;
+        }
+
+        return { user, store, resetUser };
     },
     getters: {
         signedIn: state => !!state.user,
